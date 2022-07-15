@@ -1,0 +1,51 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Usuarios",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://192.168.5.108/enlazaa-backend/public/"
+        }
+    ],
+    "paths": {
+        "/api/v1/loginapi": {
+            "post": {
+                "tags": [
+                    "responses"
+                ],
+                "summary": "Login de usuario",
+                "operationId": "obtenerPruebasPorAplicar",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "properties": {
+                                    "email": {
+                                        "description": "Updated name of the pet",
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "description": "Updated status of the pet",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "description": "Error en login"
+                    },
+                    "200": {
+                        "description": "Acceso exitoso"
+                    }
+                }
+            }
+        }
+    }
+}
